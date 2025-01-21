@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.AdminDashboardController"
+            stylesheets="@AdminDashboard.css">
+    <!-- Header -->
+    <top>
+        <HBox styleClass="header">
+            <Label text="Administrator Dashboard" styleClass="header-title"/>
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <VBox styleClass="sidebar">
+            <Button text="Manage Users" onAction="#loadManageUsers" styleClass="sidebar-button"/>
+            <Button text="Manage Courses" onAction="#loadManageCourses" styleClass="sidebar-button"/>
+            <Button text="Manage Departments" onAction="#loadManageDepartments" styleClass="sidebar-button"/>
+            <Button text="Manage Sessions" onAction="#loadManageSessions" styleClass="sidebar-button"/>
+            <Button text="View Reports" onAction="#loadViewReports" styleClass="sidebar-button"/>
+            
+            <!-- Spacer -->
+            <Region fx:id="spacer" VBox.vgrow="always"/>
+            
+            <!-- Logout Button -->
+            <Button text="Logout" onAction="#handleLogout" styleClass="logout-button"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <StackPane fx:id="mainContent" styleClass="content-area">
+            <!-- Dynamic content will load here -->
+        </StackPane>
+    </center>
+</BorderPane>

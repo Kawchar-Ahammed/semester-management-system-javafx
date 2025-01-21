@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FacultyDashboardController" stylesheets="@faculty_dashboard.css">
+    <VBox alignment="TOP_CENTER" >
+        <Label text="Faculty Dashboard" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        
+        <Button fx:id="viewAssignedCoursesBtn" text="View Assigned Courses" onAction="#viewAssignedCourses" />
+        
+        <Button fx:id="markAttendanceBtn" text="Mark Attendance" onAction="#markAttendance" />
+        
+        <Button fx:id="uploadScoresBtn" text="Upload Test Scores, Assignments, and Results" onAction="#uploadScores" />
+        
+        <!-- You can add tables or forms below for showing courses, attendance, etc. -->
+    </VBox>
+</AnchorPane>
